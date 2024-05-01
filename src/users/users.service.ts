@@ -51,11 +51,11 @@ export class UsersService {
   async updateUser(id: number, data: UpdateUserDto): Promise<Users> {
     return this.prisma.users.update({
       where: { id: Number(id) },
-      data: data,
+      data,
     });
   }
 
-  async removeUser(id: number): Promise<Users> {
+  async deleteUser(id: number): Promise<Users> {
     return this.prisma.users.delete({
       where: { id: Number(id) },
     });

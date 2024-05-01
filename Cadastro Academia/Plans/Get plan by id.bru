@@ -1,0 +1,20 @@
+meta {
+  name: Get plan by id
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:3333/plans
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "title": "Plano Gold",
+    "description": "Acesso ilimitado a todas as instalações e aulas, incluindo sauna e piscina.",
+    "value": 199
+  }
+  
+}

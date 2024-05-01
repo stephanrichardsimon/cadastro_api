@@ -1,0 +1,20 @@
+meta {
+  name: Delete plan
+  type: http
+  seq: 5
+}
+
+patch {
+  url: http://localhost:3333/plans/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "title": "Plano mais barato",
+    "description": "Básico.",
+    "value": 100
+  }
+  
+}
