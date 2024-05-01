@@ -1,0 +1,21 @@
+meta {
+  name: Create Plan
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3333/users
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "role": "USER",
+    "planId": 1
+  }
+  
+}
