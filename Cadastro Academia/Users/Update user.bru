@@ -1,0 +1,20 @@
+meta {
+  name: Update user
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3333/users
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Clara Oswald",
+    "email": "clara.oswald@example.com",
+    "password": "SecurePass!2024"
+  }
+  
+}

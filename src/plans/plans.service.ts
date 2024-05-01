@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
-import { Plan } from '@prisma/client';
+import { Plans } from '@prisma/client';
 
 @Injectable()
 export class PlansService {
@@ -10,8 +10,8 @@ export class PlansService {
     title: string;
     description: string;
     value: number;
-  }): Promise<Plan> {
-    return this.prisma.plan.create({
+  }): Promise<Plans> {
+    return this.prisma.plans.create({
       data,
     });
   }
