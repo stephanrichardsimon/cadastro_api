@@ -15,6 +15,8 @@ model Users {
   email     String   @unique
   name      String
   password  String
+
+  @@map("users")
 }
 
 model Clients {
@@ -38,4 +40,6 @@ model Plans {
   description String    @db.VarChar(255)
   value       Int
   client      Clients[]
+
+  @@map("plans")
 }
