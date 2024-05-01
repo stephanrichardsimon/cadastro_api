@@ -4,15 +4,15 @@ meta {
   seq: 4
 }
 
-post {
-  url: http://localhost:3333/users
+patch {
+  url: http://localhost:3333/users/20
   body: json
   auth: none
 }
 
 body:json {
   {
-    "name": "Clara Oswald",
+    "name": "Clara Rosa Oswald",
     "email": "clara.oswald@example.com",
     "password": "SecurePass!2024"
   }

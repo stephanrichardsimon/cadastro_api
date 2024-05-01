@@ -1,0 +1,22 @@
+meta {
+  name: Create client
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3333/clients
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Maria Silva",
+    "email": "maria.silva2@example.com",
+    "age": 34,
+    "cpf": "12345678211",
+    "planId": 4
+  }
+  
+}

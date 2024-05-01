@@ -25,7 +25,7 @@ model Clients {
   age       Int
   cpf       String   @unique
   planId    Int
-  Plan      Plans    @relation(fields: [planId], references: [id])
+  plan      Plans    @relation(fields: [planId], references: [id])
 
   @@map("clients")
 }
@@ -37,5 +37,5 @@ model Plans {
   title       String    @db.VarChar(255)
   description String    @db.VarChar(255)
   value       Int
-  Client      Clients[]
+  client      Clients[]
 }

@@ -4,15 +4,15 @@ meta {
   seq: 4
 }
 
-post {
-  url: http://localhost:3333/plans
+patch {
+  url: http://localhost:3333/plans/1
   body: json
   auth: none
 }
 
 body:json {
   {
-    "title": "Plano Barato",
+    "title": "Plano mais barato",
     "description": "Básico.",
     "value": 100
   }

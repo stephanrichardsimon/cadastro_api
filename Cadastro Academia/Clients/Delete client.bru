@@ -1,0 +1,21 @@
+meta {
+  name: Delete client
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:3333/clients/15
+  body: none
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Carlos Da Oliveira",
+    "email": "carlos.oliveira@example.com",
+    "age": 45,
+    "cpf": "98765432109",
+    "planId": 3
+  }
+}

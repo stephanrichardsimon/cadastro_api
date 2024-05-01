@@ -5,17 +5,16 @@ meta {
 }
 
 post {
-  url: http://localhost:3333/users
+  url: http://localhost:3333/plans
   body: json
   auth: none
 }
 
 body:json {
   {
-    "name": "John Doe",
-    "email": "john.doe@example.com",
-    "role": "USER",
-    "planId": 1
+    "title": "Plano Barato",
+    "description": "Básico.",
+    "value": 100
   }
   
 }

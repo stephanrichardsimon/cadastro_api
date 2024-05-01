@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
 import { Plans } from '@prisma/client';
 import { CreatePlanDto } from './dto/create-plan.dto';
@@ -14,7 +14,7 @@ export class PlansService {
         id: true,
         title: true,
         value: true,
-        Client: true,
+        client: true,
       },
     });
     return plans;
@@ -24,6 +24,9 @@ export class PlansService {
     const plan = await this.prisma.plans.findUnique({
       where: { id: Number(id) },
     });
+    if (!plan) {
+      throw new NotFoundException(`Plan with ID ${id} not found`);
+    }
     return plan;
   }
 
