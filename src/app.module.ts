@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { PrismaModule } from './prisma/prisma.module';
 import { PlansModule } from './plans/plans.module';
 import { ClientsModule } from './clients/clients.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { ClientsModule } from './clients/clients.module';
     PrismaModule,
     PlansModule,
     ClientsModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [],

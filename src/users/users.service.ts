@@ -14,6 +14,17 @@ import * as bcrypt from 'bcrypt';
 export class UsersService {
   constructor(private prisma: PrismaService) {}
 
+  async findOne(email: string): Promise<Users | null> {
+    const user = await this.prisma.users.findUnique({
+      where: { email },
+    });
+    if (!user) {
+      throw new NotFoundException(`User with email ${email} not found`);
+    }
+
+    return user;
+  }
+
   async getAllUsers() {
     const users = await this.prisma.users.findMany({
       select: {

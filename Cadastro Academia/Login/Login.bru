@@ -1,20 +1,18 @@
 meta {
-  name: Create user
+  name: Login
   type: http
   seq: 1
 }
 
 post {
-  url: http://localhost:3333/users
+  url: http://localhost:3333/auth/login
   body: json
   auth: none
 }
 
 body:json {
   {
-    "name": "Stephan Richard Simon",
     "email": "stephan@mail.com",
     "password": "123"
   }
-  
 }
